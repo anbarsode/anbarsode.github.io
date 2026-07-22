@@ -1,8 +1,15 @@
 TODO List for Website Polish:
 
+[ ] Style:
+    - The Nunito font isn't really working, and the website keeps defaulting to sans-serif. Change fonts to these instead
+      + Body: Lucida Sans, Verdana, sans-serif
+      + h1, h2, nav a: Verdana, Lucida Sans, sans-serif
+      + Footer: Consolas, monospace
+
 [ ] Content:
-    - Add an "About Me" section before research interests and make the "About" menu button to refer to that instead of the "Hello" it refers to now.
-    - Replace the placeholder text in "Research Interests", "Experience", "Education", and "Outreach".
+    - Add an "About Me" section (with a 5-6 line summary, leave with placeholder text for now) before research interests and make the "About" menu button to refer to that instead of the "Hello" it refers to now.
+    - Change "Outreach" to "Contributions"
+    - Replace the placeholder text in "About Me", "Research Interests", "Experience", "Education", and "Contributions".
     - Add a link to the pdf version of the CV (to be linked from another github repo)
     - Add a "last updated" alongside the copywright footer
 
