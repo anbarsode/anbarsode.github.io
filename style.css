@@ -56,7 +56,7 @@ nav ul {
 
 nav a {
     font-family: 'Nunito', sans-serif;
-    color: var(--coral);
+    color: var(--teal);
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s;
