@@ -4,7 +4,13 @@ function setup() {
 }
 
 function draw() {
-  background(220);
-  fill(0, 102, 153);
+  background(255, 250, 240); // Matches body background
+  stroke(0, 128, 128); // Teal
+  fill(255, 127, 80); // Coral
   ellipse(width/2, height/2, 50, 50);
+  
+  // Decorative line
+  stroke(0, 255, 127); // SpringGreen
+  strokeWeight(4);
+  line(0, height-5, width, height-5);
 }
