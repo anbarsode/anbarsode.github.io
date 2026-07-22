@@ -217,3 +217,13 @@ section {
         display: flex;
     }
 }
+
+/* Icon styling for external links */
+.ext-link {
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.ext-link i {
+    margin-right: 5px;
+}
