@@ -1,0 +1,30 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+header {
+    background: #f4f4f4;
+    padding: 1rem;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+}
+#p5-canvas-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
