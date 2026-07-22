@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
 </head>
 <body>
+    <button id="top-btn" onclick="topFunction()" title="Go to top">↑</button>
     <header>
         <h1>Ankur Barsode</h1>
         <nav>
@@ -52,6 +53,27 @@
         <p>&copy; 2026 Ankur Barsode</p>
     </footer>
 
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("top-btn");
+
+        // When the user scrolls down 10% of the document height, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > (document.body.scrollHeight * 0.1) || document.documentElement.scrollTop > (document.documentElement.scrollHeight * 0.1)) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

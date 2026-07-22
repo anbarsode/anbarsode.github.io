@@ -1,18 +1,20 @@
 :root {
-    /* Refined Color Palette */
-    --bg-dark: #0f172a; /* Slate-navy background */
-    --text-main: #e2e8f0; /* Soft white/gray text */
+    --bg-dark: #0f172a;
+    --text-main: #e2e8f0;
     --accent-gold: #FFD700;
     --accent-teal: #008080;
-    --accent-coral: #FF7F50;
     --border-color: #334155;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
 
 body {
     font-family: 'Nunito', sans-serif;
-    line-height: 1.7; /* Slightly improved readability */
+    line-height: 1.7;
     margin: 0;
     padding: 0 10%;
     background-color: var(--bg-dark);
@@ -86,6 +88,14 @@ h2 {
     font-weight: 400;
 }
 
+.hero-statement {
+    font-size: 1.3rem;
+    color: #cbd5e1;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2rem auto;
+}
+
 footer {
     font-family: 'Nunito', monospace;
     text-align: center;
@@ -94,10 +104,23 @@ footer {
     font-size: 0.8rem;
 }
 
-.hero-statement {
-    font-size: 1.3rem;
-    color: #cbd5e1;
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 2rem auto;
+#top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--accent-gold);
+    color: var(--bg-dark);
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+#top-btn:hover {
+    background-color: var(--accent-teal);
+    color: white;
 }
