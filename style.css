@@ -1,22 +1,23 @@
 :root {
-    /* Color Palette */
+    /* Color Palette - Locked */
     --navy: #000080;
     --coral: #FF7F50;
     --teal: #008080;
     --crimson: #DC143C;
     --springgreen: #00FF7F;
     --gold: #FFD700;
-    
-    /* Dark Mode Defaults */
-    --bg-dark: #000033; /* Dark Navy background */
+    --bg-dark: #000033;
     --text-light: #f4f4f4;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
 body {
-    font-family: Lucida Sans, Verdana, sans-serif;
+    font-family: 'Nunito', sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 0 5%;
+    /* 1.5 inch margin on each side of a 30 inch display = 10% per side */
+    padding: 0 10%;
     background-color: var(--bg-dark);
     color: var(--text-light);
 }
@@ -30,10 +31,9 @@ header {
 }
 
 header h1 {
-    font-family: Verdana, Lucida Sans, sans-serif;
     margin: 0;
     font-size: 1.8rem;
-    color: var(--springgreen);
+    color: var(--gold);
 }
 
 nav ul {
@@ -45,37 +45,33 @@ nav ul {
 }
 
 nav a {
-    font-family: Verdana, Lucida Sans, sans-serif;
-    color: var(--coral);
+    color: var(--springgreen);
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s;
-    font-size: 1.1rem;
 }
 
 nav a:hover {
-    color: var(--text-light);
+    color: var(--coral);
 }
 
 section {
     padding: 3rem 0;
-    max-width: 900px;
+    max-width: 100%; /* Allows sections to stretch to the 10% padding */
     margin: auto;
-    border-bottom: 1px solid var(--teal);
+    border-bottom: 1px solid var(--navy);
 }
 
 h2 {
-    font-family: Verdana, Lucida Sans, sans-serif;
     text-align: center;
-    color: var(--springgreen);
+    color: var(--crimson);
     margin-bottom: 2rem;
     text-transform: uppercase;
 }
 
 footer {
-    font-family: Consolas, monospace;
     text-align: center;
     padding: 2rem;
-    color: var(--teal);
+    color: var(--gold);
     font-size: 0.9rem;
 }
