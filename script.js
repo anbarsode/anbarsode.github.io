@@ -4,13 +4,16 @@ function setup() {
 }
 
 function draw() {
-  background(255, 250, 240); // Matches body background
-  stroke(0, 128, 128); // Teal
-  fill(255, 127, 80); // Coral
-  ellipse(width/2, height/2, 50, 50);
+  background(18, 18, 18); // Dark mode background
   
-  // Decorative line
-  stroke(0, 255, 127); // SpringGreen
-  strokeWeight(4);
-  line(0, height-5, width, height-5);
+  // Crimson circle
+  noStroke();
+  fill(220, 20, 60); 
+  ellipse(width/2, height/2, 60, 60);
+  
+  // Gold accent ring
+  stroke(255, 215, 0);
+  noFill();
+  strokeWeight(2);
+  ellipse(width/2, height/2, 75, 75);
 }
