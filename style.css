@@ -1,22 +1,24 @@
 :root {
-    /* Color Palette - Locked */
+    /* Color Palette */
     --navy: #000080;
     --coral: #FF7F50;
     --teal: #008080;
     --crimson: #DC143C;
     --springgreen: #00FF7F;
     --gold: #FFD700;
-    --bg-dark: #000033;
+    
+    /* Dark Mode Defaults */
+    --bg-dark: #000033; /* Dark Navy background */
     --text-light: #f4f4f4;
 }
 
+/* Importing Nunito Font */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
 
 body {
     font-family: 'Nunito', sans-serif;
     line-height: 1.6;
     margin: 0;
-    /* 1.5 inch margin on each side of a 30 inch display = 10% per side */
     padding: 0 10%;
     background-color: var(--bg-dark);
     color: var(--text-light);
@@ -57,7 +59,7 @@ nav a:hover {
 
 section {
     padding: 3rem 0;
-    max-width: 100%; /* Allows sections to stretch to the 10% padding */
+    max-width: 900px;
     margin: auto;
     border-bottom: 1px solid var(--navy);
 }
