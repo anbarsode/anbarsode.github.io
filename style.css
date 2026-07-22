@@ -195,7 +195,7 @@ section {
     background-color: var(--accent-gold);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 920px) {
     .menu-toggle {
         display: flex;
     }
