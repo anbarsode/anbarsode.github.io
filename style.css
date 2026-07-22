@@ -227,3 +227,20 @@ section {
 .ext-link i {
     margin-right: 5px;
 }
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    font-size: 1.8rem;
+    justify-content: flex-start;
+}
+
+.social-links a {
+    color: var(--accent-gold);
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-teal);
+}
