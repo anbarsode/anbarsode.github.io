@@ -1,18 +1,9 @@
 TODO List for Website Polish:
 
-[ ] Aesthetic/Design:
-    - The current color palette is consistent, but consider reducing the overall number of accent colors 
-      (currently Gold, Teal, Crimson, etc.) to keep the "academic/professional" look strictly authoritative.
-    - Add subtle CSS transitions on hover for all buttons/links to make the site feel more interactive.
-
 [ ] Content:
     - Replace the placeholder text in "Research Interests", "Experience", "Education", and "Outreach".
-    - Consider adding a professional brief summary (3-4 sentences) under the profile picture to provide 
-      immediate context to visitors who don't scroll.
 
 [ ] Functional/Navigation:
-    - The navigation menu is quite long. Consider simplifying to primary sections (About, Research, 
-      Publications) and grouping remaining sections (Experience, Education, Outreach) into a "CV" or "Background" dropdown.
     - Test mobile menu responsiveness on various device widths to ensure the hamburger icon and menu 
       transitions are perfectly smooth.
 
