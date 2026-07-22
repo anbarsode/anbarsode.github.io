@@ -1,27 +1,23 @@
 :root {
-    /* Color Palette */
-    --navy: #000080;
-    --coral: #FF7F50;
-    --teal: #008080;
-    --crimson: #DC143C;
-    --springgreen: #00FF7F;
-    --gold: #FFD700;
-    
-    /* Dark Mode Defaults */
-    --bg-dark: #000033; /* Dark Navy background */
-    --text-light: #f4f4f4;
+    /* Refined Color Palette */
+    --bg-dark: #0f172a; /* Slate-navy background */
+    --text-main: #e2e8f0; /* Soft white/gray text */
+    --accent-gold: #FFD700;
+    --accent-teal: #008080;
+    --accent-coral: #FF7F50;
+    --border-color: #334155;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
 
 body {
     font-family: 'Nunito', sans-serif;
-    line-height: 1.6;
+    line-height: 1.7; /* Slightly improved readability */
     margin: 0;
     padding: 0 10%;
     background-color: var(--bg-dark);
-    color: var(--text-light);
-    padding-top: 80px; /* Offset to account for fixed header */
+    color: var(--text-main);
+    padding-top: 80px;
 }
 
 header {
@@ -35,15 +31,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid var(--teal);
+    border-bottom: 1px solid var(--border-color);
     z-index: 1000;
 }
 
 header h1 {
     font-family: 'Nunito', sans-serif;
     margin: 0;
-    font-size: 1.8rem;
-    color: var(--springgreen);
+    font-size: 1.6rem;
+    color: var(--accent-gold);
 }
 
 nav ul {
@@ -56,48 +52,44 @@ nav ul {
 
 nav a {
     font-family: 'Nunito', sans-serif;
-    color: var(--coral);
+    color: var(--text-main);
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 400;
     transition: color 0.3s;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 nav a:hover {
-    color: var(--text-light);
+    color: var(--accent-gold);
 }
 
 section {
-    padding: 3rem 0;
+    padding: 4rem 0;
     max-width: 100%;
     margin: auto;
-    border-bottom: 1px solid var(--teal);
-    scroll-margin-top: 100px; /* Offset for anchor links */
+    border-bottom: 1px solid var(--border-color);
+    scroll-margin-top: 80px;
 }
 
 h2 {
     font-family: 'Nunito', sans-serif;
     text-align: center;
-    color: var(--springgreen);
+    color: var(--accent-gold);
     margin-bottom: 2rem;
+    font-weight: 700;
     text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#publications a {
+    color: var(--accent-teal);
+    font-weight: 400;
 }
 
 footer {
     font-family: 'Nunito', monospace;
     text-align: center;
     padding: 2rem;
-    color: var(--coral);
-    font-size: 0.9rem;
-}
-
-/* Specific link styling for publications */
-#publications a {
-    color: var(--teal);
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#publications a:hover {
-    text-decoration: underline;
+    color: var(--border-color);
+    font-size: 0.8rem;
 }
