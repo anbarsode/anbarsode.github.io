@@ -10,15 +10,20 @@
     <button id="top-btn" onclick="topFunction()" title="Go to top">↑</button>
     <header>
         <h1>Ankur Barsode</h1>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#outreach">Outreach</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul id="nav-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#research" onclick="toggleMenu()">Research</a></li>
+                <li><a href="#publications" onclick="toggleMenu()">Publications</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+                <li><a href="#outreach" onclick="toggleMenu()">Outreach</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -81,6 +86,10 @@
     </footer>
 
     <script>
+        function toggleMenu() {
+            document.getElementById("nav-links").classList.toggle("active");
+        }
+        
         let mybutton = document.getElementById("top-btn");
         window.onscroll = function() {scrollFunction()};
         function scrollFunction() {
