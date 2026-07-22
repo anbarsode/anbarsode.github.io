@@ -77,7 +77,7 @@
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>The easiest way to reach me is via email at <span id="email-container">...</span>. I am generally not very active on social media.</p>
+            <p>The easiest way to reach me is via <span id="email-container">...</span>. I am generally not very active on social media.</p>
         </section>
     </main>
 
@@ -90,7 +90,7 @@
         const user = "ankur.barsode";
         const domain = "icts.res.in";
         document.getElementById("email-container").innerHTML = 
-            `<a href="mailto:${user}@${domain}" style="color: var(--accent-teal);">${user}@${domain}</a>`;
+            `<a href="mailto:${user}@${domain}" style="color: var(--accent-teal);">email</a>`;
 
         function toggleMenu() {
             document.getElementById("nav-links").classList.toggle("active");
