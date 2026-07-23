@@ -1,22 +1,14 @@
 TODO List for Website Polish:
 
-[ ] Style:
-    - The Nunito font isn't really working, and the website keeps defaulting to sans-serif. Change fonts to these instead
-      + Body: Lucida Sans, Verdana, sans-serif
-      + h1, h2, nav a: Verdana, Lucida Sans, sans-serif
-      + Footer: Consolas, monospace
+# Short term
+* Make CV repo public
+* Link PDF CV in the website
+* Final review
+* Upload to github pages
+* Add link in CV
+* Update CV
 
-[ ] Content:
-    - Add an "About Me" section (with a 5-6 line summary, leave with placeholder text for now) before research interests and make the "About" menu button to refer to that instead of the "Hello" it refers to now.
-    - Change "Outreach" to "Contributions"
-    - Replace the placeholder text in "About Me", "Research Interests", "Experience", "Education", and "Contributions".
-    - Add a link to the pdf version of the CV (to be linked from another github repo)
-    - Add a "last updated" alongside the copywright footer
+# Long term
+* Fix the timeline
+* Fill the outreach page
 
-[ ] Functional/Navigation:
-    - Test mobile menu responsiveness on various device widths to ensure the hamburger icon and menu 
-      transitions are perfectly smooth.
-
-[ ] Social/Connectivity:
-    - Once content is added, perform a final audit to ensure all external links open in a new tab 
-      (add target="_blank" rel="noopener noreferrer") for better UX.
