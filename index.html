@@ -3,132 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Ankur Barsode</title>
+    <meta name="description" content="Ankur Barsode — researcher in gravitational-wave astronomy, lensing, and Bayesian inference.">
+    <title>Ankur Barsode | Gravitational-Wave Researcher</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <button id="top-btn" onclick="topFunction()" title="Go to top">↑</button>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <button id="top-btn" onclick="topFunction()" title="Back to top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
     <header>
-        <h1><a href="#home" class="header-link">Ankur Barsode</a></h1>
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <nav>
+        <a href="#home" class="wordmark">Ankur Barsode</a>
+        <button class="menu-toggle" type="button" onclick="toggleMenu()" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+            <span></span><span></span><span></span>
+        </button>
+        <nav aria-label="Primary navigation">
             <ul id="nav-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#research" onclick="toggleMenu()">Research</a></li>
-                <li><a href="#publications" onclick="toggleMenu()">Publications</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#education" onclick="toggleMenu()">Education</a></li>
-                <li><a href="#contributions" onclick="toggleMenu()">Contributions</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#research" onclick="closeMenu()">Research</a></li>
+                <li><a href="#publications" onclick="closeMenu()">Publications</a></li>
+                <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
+                <li><a href="#education" onclick="closeMenu()">Education</a></li>
+                <li><a href="#contributions" onclick="closeMenu()">Contributions</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section id="home" class="about-section">
-            <div class="hero-container">
-                <div class="hero-text">
-                    <h2>Hello! I'm Ankur Barsode</h2>
-                    <div class="social-links">
-                        <span id="email-icon"><a href="#" title="Email"><i class="fas fa-envelope"></i></a></span>
-                        <a href="https://inspirehep.net/authors/3081663" title="INSPIREHEP" target="_blank" rel="noopener noreferrer"><i class="fas fa-circle-info"></i></a>
-                        <a href="https://scholar.google.com/citations?user=HiMMiqgAAAAJ&hl=en" title="Google Scholar" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i></a>
-                        <a href="https://orcid.org/0009-0002-3054-7237" title="ORCID" target="_blank" rel="noopener noreferrer"><i class="fab fa-orcid"></i></a>
-                        <a href="URL_TO_CV_PDF" title="CV" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i></a> <a href="https://github.com/anbarsode" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                    </div>
+    <main id="main-content">
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow">Gravitational-wave astronomy · Bayesian inference</p>
+                <h1 id="hero-title">Ankur Barsode</h1>
+                <p class="hero-lede">PhD researcher investigating how gravitational lensing can reveal new structure in the universe.</p>
+                <p class="hero-affiliation">International Centre for Theoretical Sciences, Tata Institute of Fundamental Research · Bengaluru, India</p>
+                <div class="social-links" aria-label="Professional links">
+                    <span id="email-icon"><a href="#" title="Email" aria-label="Email"><i class="fas fa-envelope"></i></a></span>
+                    <a href="https://inspirehep.net/authors/3081663" title="INSPIREHEP" aria-label="INSPIREHEP" target="_blank" rel="noopener noreferrer"><i class="fas fa-circle-info"></i></a>
+                    <a href="https://scholar.google.com/citations?user=HiMMiqgAAAAJ&amp;hl=en" title="Google Scholar" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i></a>
+                    <a href="https://orcid.org/0009-0002-3054-7237" title="ORCID" aria-label="ORCID" target="_blank" rel="noopener noreferrer"><i class="fab fa-orcid"></i></a>
+                    <a href="URL_TO_CV_PDF" title="Curriculum vitae" aria-label="Curriculum vitae" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i></a>
+                    <a href="https://github.com/anbarsode" title="GitHub" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                 </div>
-                <div class="hero-image">
-                    <img src="Ankur_Barsode.jpg" alt="Ankur Barsode" class="profile-pic">
-                </div>
+            </div>
+            <div class="hero-portrait"><img src="Ankur_Barsode.jpg" alt="Portrait of Ankur Barsode" class="profile-pic"></div>
+        </section>
+
+        <section id="about" aria-labelledby="about-title">
+            <p class="section-kicker">Profile</p><h2 id="about-title">About</h2>
+            <div class="prose wide"><p>I am a final-year PhD student at the International Centre for Theoretical Sciences (ICTS), a centre of the Tata Institute of Fundamental Research. My research centres on gravitational-wave lensing and its potential to deepen our understanding of the universe. Alongside my research, I contribute to scientific software, mentorship, and the communication of gravitational-wave science.</p></div>
+        </section>
+
+        <section id="research" aria-labelledby="research-title">
+            <p class="section-kicker">Research programme</p><h2 id="research-title">Research interests</h2>
+            <div class="research-grid">
+                <article><i class="fas fa-wave-square" aria-hidden="true"></i><h3>Gravitational-wave lensing</h3><p>Developing robust searches for strongly lensed gravitational waves and assessing their scientific implications for astrophysics and cosmology.</p></article>
+                <article><i class="fas fa-chart-line" aria-hidden="true"></i><h3>Bayesian inference</h3><p>Designing principled statistical methods for parameter estimation, model selection, and extracting reliable conclusions from observational data.</p></article>
+                <article><i class="fas fa-microchip" aria-hidden="true"></i><h3>Scientific computing</h3><p>Applying efficient numerical and machine-learning methods to accelerate demanding calculations in gravitational-wave data analysis.</p></article>
             </div>
         </section>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a final-year PhD student at the International Centre for Theoretical Sciences (a centre of the Tata Institute of Fundamental Research) in Bengaluru, India. My research revolves around the fascinating world of gravitational waves, where I explore the intricacies of lensing phenomena and their implications for understanding the universe. Beyond my core research, I am deeply passionate about scientific communication, mentoring the next generation of researchers, and developing efficient computational tools for data analysis.</p>
-        </section>
-
-        <section id="research">
-            <h2>Research Interests</h2>
-            <p>My primary research focuses on <strong>gravitational wave astronomy</strong>, with a particular interest in <strong>gravitational lensing</strong>. I dedicate much of my work to developing searches for <strong>strongly lensed gravitational waves</strong> and understanding the broader implications of gravitational wave lensing in cosmology and astrophysics.</p>
-            <p>In addition to these core topics, I am committed to advancing scientific software through <strong>machine learning methods</strong> to accelerate complex calculations. My work often involves rigorous <strong>parameter estimation</strong> and the application of <strong>Bayesian statistics</strong> to extract meaningful insights from observational data.</p>
-        </section>
-        
-        <section id="publications">
-            <h2>Selected Publications</h2>
-            <ol>
-                <li>Barsode, A., Goyal, S., & Ajith, P. (2025). Fast and Efficient Bayesian Method to Search for Strongly Lensed Gravitational Waves. <em>The Astrophysical Journal, 980</em>(2), 258. <a href="https://doi.org/10.3847/1538-4357/adae10" target="_blank" rel="noopener noreferrer">↗</a></li>
-                <li>Barsode, A., Maity, K. N., & Ajith, P. (2026). Search for strong lensing of gravitational waves in the binary black hole events from O1-O4a. <em>arXiv:2607.08466</em>. <a href="https://arxiv.org/abs/2607.08466" target="_blank" rel="noopener noreferrer">↗</a></li>
-                <li>Barsode, A. (2026). BB plot: A Tool for Accurate Model Selection Using Bayes factors. <em>arXiv:2605.10333</em>. <a href="https://arxiv.org/abs/2605.10333" target="_blank" rel="noopener noreferrer">↗</a></li>
-                <li>Barsode, A., Maity, K. N., & Ajith, P. (2026). Lensing, Not Luck! Detection Prospects of Strongly Lensed Gravitational Waves. <em>The Astrophysical Journal, 998</em>(2), 294. <a href="https://doi.org/10.3847/1538-4357/ae38c1" target="_blank" rel="noopener noreferrer">↗</a></li>
-                <li>Barsode, A., Kapadia, S. J., & Ajith, P. (2024). Constraints on Compact Dark Matter from the Nonobservation of Gravitational-wave Strong Lensing. <em>The Astrophysical Journal, 975</em>(1), 48. <a href="https://doi.org/10.3847/1538-4357/ad77c4" target="_blank" rel="noopener noreferrer">↗</a></li>
-                <li>Barsode, A., & Choudhury, T. R. (2024). Efficient hybrid technique for generating sub-grid haloes in reionization simulations. <em>Journal of Cosmology and Astroparticle Physics, 2024</em>(11), 036. <a href="https://doi.org/10.1088/1475-7516/2024/11/036" target="_blank" rel="noopener noreferrer">↗</a></li>
-                <li>LIGO Scientific, VIRGO, KAGRA Collaborations (Barsode, A. et al.) (2025). GWTC-4.0: Searches for Gravitational-Wave Lensing Signatures. <em>arXiv:2512.16347</em>. <a href="https://arxiv.org/abs/2512.16347" target="_blank" rel="noopener noreferrer">↗</a></li>
+        <section id="publications" aria-labelledby="publications-title">
+            <p class="section-kicker">Selected work</p><h2 id="publications-title">Publications</h2>
+            <ol class="publication-list">
+                <li><span>2026</span><p>Barsode, A., Maity, K. N., &amp; Ajith, P. <em>Search for strong lensing of gravitational waves in the binary black hole events from O1–O4a.</em> arXiv:2607.08466. <a href="https://arxiv.org/abs/2607.08466" target="_blank" rel="noopener noreferrer" aria-label="Open publication">↗</a></p></li>
+                <li><span>2026</span><p>Barsode, A. <em>BB plot: A Tool for Accurate Model Selection Using Bayes factors.</em> arXiv:2605.10333. <a href="https://arxiv.org/abs/2605.10333" target="_blank" rel="noopener noreferrer" aria-label="Open publication">↗</a></p></li>
+                <li><span>2026</span><p>Barsode, A., Maity, K. N., &amp; Ajith, P. <em>Lensing, Not Luck! Detection Prospects of Strongly Lensed Gravitational Waves.</em> <em>The Astrophysical Journal, 998</em>(2), 294. <a href="https://doi.org/10.3847/1538-4357/ae38c1" target="_blank" rel="noopener noreferrer" aria-label="Open publication">↗</a></p></li>
+                <li><span>2025</span><p>Barsode, A., Goyal, S., &amp; Ajith, P. <em>Fast and Efficient Bayesian Method to Search for Strongly Lensed Gravitational Waves.</em> <em>The Astrophysical Journal, 980</em>(2), 258. <a href="https://doi.org/10.3847/1538-4357/adae10" target="_blank" rel="noopener noreferrer" aria-label="Open publication">↗</a></p></li>
+                <li><span>2025</span><p>LIGO Scientific, VIRGO, KAGRA Collaborations (Barsode, A. et al.). <em>GWTC-4.0: Searches for Gravitational-Wave Lensing Signatures.</em> arXiv:2512.16347. <a href="https://arxiv.org/abs/2512.16347" target="_blank" rel="noopener noreferrer" aria-label="Open publication">↗</a></p></li>
+                <li><span>2024</span><p>Barsode, A., Kapadia, S. J., &amp; Ajith, P. <em>Constraints on Compact Dark Matter from the Nonobservation of Gravitational-wave Strong Lensing.</em> <em>The Astrophysical Journal, 975</em>(1), 48. <a href="https://doi.org/10.3847/1538-4357/ad77c4" target="_blank" rel="noopener noreferrer" aria-label="Open publication">↗</a></p></li>
+                <li><span>2024</span><p>Barsode, A., &amp; Choudhury, T. R. <em>Efficient hybrid technique for generating sub-grid haloes in reionization simulations.</em> <em>Journal of Cosmology and Astroparticle Physics, 2024</em>(11), 036. <a href="https://doi.org/10.1088/1475-7516/2024/11/036" target="_blank" rel="noopener noreferrer" aria-label="Open publication">↗</a></p></li>
             </ol>
-            <p>Full publication list available at <a href="https://inspirehep.net/authors/3081663" target="_blank" rel="noopener noreferrer"><i class="fas fa-circle-info"></i> INSPIREHEP</a> and <a href="https://scholar.google.com/citations?user=HiMMiqgAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><i class="fas fa-graduation-cap"></i> Google Scholar</a>.</p>
+            <p class="section-note">For a complete record, visit <a href="https://inspirehep.net/authors/3081663" target="_blank" rel="noopener noreferrer">INSPIREHEP</a> or <a href="https://scholar.google.com/citations?user=HiMMiqgAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>.</p>
         </section>
 
-        <section id="experience">
-            <h2>Experience</h2>
-            <ul>
-                <li><strong>PhD Student</strong> at ICTS, TIFR (Sept 2021 – Present): Focusing on gravitational wave lensing.</li>
-                <li><strong>Active Member</strong> of the LIGO-Virgo-KAGRA (LVK) collaboration (Dec 2022 – Present): Contributing to gravitational wave lensing searches.</li>
-                <li><strong>Long-term Research Student</strong> at NCRA (Jan 2021 – Jul 2021): Worked on cosmological simulations for my MSc thesis.</li>
-                <li><strong>Summer Research Student</strong> at NCRA (May 2020 – Jul 2020): Research in pulsar astronomy.</li>
-            </ul>
+        <section id="experience" aria-labelledby="experience-title">
+            <p class="section-kicker">Research journey</p><h2 id="experience-title">Experience</h2>
+            <div class="experience-timeline">
+                <article class="timeline-entry current"><div class="timeline-date">Sept 2021 — Present</div><div class="timeline-card"><p class="role">PhD Student</p><h3>ICTS, TIFR</h3><p>Conducting research on gravitational-wave lensing and the statistical methods required to identify lensed events.</p></div></article>
+                <article class="timeline-entry current"><div class="timeline-date">Dec 2022 — Present</div><div class="timeline-card"><p class="role">Active member</p><h3>LIGO–Virgo–KAGRA Collaboration</h3><p>Contributing to searches for signatures of gravitational-wave lensing.</p></div></article>
+                <article class="timeline-entry"><div class="timeline-date">Jan — Jul 2021</div><div class="timeline-card"><p class="role">Long-term research student</p><h3>NCRA</h3><p>Worked on cosmological simulations for the MSc thesis.</p></div></article>
+                <article class="timeline-entry"><div class="timeline-date">May — Jul 2020</div><div class="timeline-card"><p class="role">Summer research student</p><h3>NCRA</h3><p>Undertook research in pulsar astronomy.</p></div></article>
+            </div>
         </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <p>My academic background includes:</p>
-            <ul>
-                <li><strong>Dual Degree (BE in Mechanical Engineering & MSc in Physics)</strong>, BITS Pilani, Pilani campus (2016 – 2021).</li>
-                <li><strong>Early Education</strong> in Pune.</li>
-            </ul>
-        </section>
+        <section id="education" aria-labelledby="education-title"><p class="section-kicker">Foundation</p><h2 id="education-title">Education</h2><div class="education-card"><p class="degree">Dual Degree — BE in Mechanical Engineering &amp; MSc in Physics</p><p>BITS Pilani, Pilani Campus <span>·</span> 2016–2021</p><p class="muted">Early education in Pune.</p></div></section>
 
-        <section id="contributions">
-            <h2>Contributions</h2>
-            <p>I am passionate about teaching and mentoring. I have lectured and tutored at the ICTS Gravitational Wave Data Workshop (GWODW) in 
-            <a href="https://www.icts.res.in/discussion-meeting/gwodw2024" target="_blank" rel="noopener noreferrer">2024</a>, 
-            <a href="https://www.icts.res.in/discussion-meeting/gwodw25" target="_blank" rel="noopener noreferrer">2025</a>, and 
-            <a href="https://www.icts.res.in/discussion-meeting/GWODW2026" target="_blank" rel="noopener noreferrer">2026</a>.</p>
-            <p>Beyond formal lecturing, I have had the privilege of co-advising a master's thesis and mentoring a junior PhD student in our group.</p>
-<p>I am also involved in public outreach. Check out my <a href="outreach.html">outreach page</a> for more details.</p>
-        </section>
+        <section id="contributions" aria-labelledby="contributions-title"><p class="section-kicker">Teaching &amp; community</p><h2 id="contributions-title">Contributions</h2><div class="prose wide"><p>I have lectured and tutored at the ICTS Gravitational Wave Data Workshop (GWODW) in <a href="https://www.icts.res.in/discussion-meeting/gwodw2024" target="_blank" rel="noopener noreferrer">2024</a>, <a href="https://www.icts.res.in/discussion-meeting/gwodw25" target="_blank" rel="noopener noreferrer">2025</a>, and <a href="https://www.icts.res.in/discussion-meeting/GWODW2026" target="_blank" rel="noopener noreferrer">2026</a>. I have also co-advised a master's thesis and mentored a junior PhD researcher within my group.</p><p>I am involved in public engagement with science; visit the <a href="outreach.html">outreach page</a> for more.</p></div></section>
     </main>
-
-    <footer>
-        <p>&copy; 2026 Ankur Barsode | Last updated: July 2026</p>
-    </footer>
-
+    <footer><p>© 2026 Ankur Barsode <span>·</span> Last updated July 2026</p></footer>
     <script>
-        const user = "ankur.barsode";
-        const domain = "icts.res.in";
-        document.getElementById("email-icon").innerHTML = 
-            `<a href="mailto:${user}@${domain}" title="Email"><i class="fas fa-envelope"></i></a>`;
-
-        function toggleMenu() {
-            document.getElementById("nav-links").classList.toggle("active");
-        }
-        
-        let mybutton = document.getElementById("top-btn");
-        window.onscroll = function() {scrollFunction()};
-        function scrollFunction() {
-            if (document.body.scrollTop > (document.body.scrollHeight * 0.1) || document.documentElement.scrollTop > (document.documentElement.scrollHeight * 0.1)) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-        function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        }
+        const user = "ankur.barsode", domain = "icts.res.in";
+        document.getElementById("email-icon").innerHTML = `<a href="mailto:${user}@${domain}" title="Email" aria-label="Email"><i class="fas fa-envelope"></i></a>`;
+        function toggleMenu() { const nav = document.getElementById("nav-links"), button = document.querySelector(".menu-toggle"); nav.classList.toggle("active"); button.setAttribute("aria-expanded", nav.classList.contains("active")); }
+        function closeMenu() { const nav = document.getElementById("nav-links"), button = document.querySelector(".menu-toggle"); nav.classList.remove("active"); button.setAttribute("aria-expanded", "false"); }
+        const mybutton = document.getElementById("top-btn");
+        window.addEventListener("scroll", () => { mybutton.classList.toggle("visible", window.scrollY > 500); });
+        function topFunction() { window.scrollTo({ top: 0, behavior: "smooth" }); }
     </script>
 </body>
 </html>
