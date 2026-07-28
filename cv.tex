@@ -1,268 +1,141 @@
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
-%	The MIT License (MIT)
-%
-%	Copyright (c) 2021 Jitin Nair
-%
-%	Permission is hereby granted, free of charge, to any person obtaining a copy
-%	of this software and associated documentation files (the "Software"), to deal
-%	in the Software without restriction, including without limitation the rights
-%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-%	copies of the Software, and to permit persons to whom the Software is
-%	furnished to do so, subject to the following conditions:
-%
-%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-%	THE SOFTWARE.
-%
-%
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
-
-%----------------------------------------------------------------------------------------
-%	DOCUMENT DEFINITION
-%----------------------------------------------------------------------------------------
-
-% article class because we want to fully customize the page and not use a cv template
 \documentclass[a4paper,12pt]{article}
 
-%----------------------------------------------------------------------------------------
-%	FONT
-%----------------------------------------------------------------------------------------
-
-% % fontspec allows you to use TTF/OTF fonts directly
-% \usepackage{fontspec}
-% \defaultfontfeatures{Ligatures=TeX}
-
-% % modified for ShareLaTeX use
-% \setmainfont[
-% SmallCapsFont = Fontin-SmallCaps.otf,
-% BoldFont = Fontin-Bold.otf,
-% ItalicFont = Fontin-Italic.otf
-% ]
-% {Fontin.otf}
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES
-%----------------------------------------------------------------------------------------
-\usepackage{url}
 \usepackage{parskip}
-
-%other packages for formatting
-\RequirePackage{color}
-\RequirePackage{graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{graphicx}
+\usepackage{xcolor}
 \usepackage[margin=1in]{geometry}
-\usepackage{wrapfig}
-
-%tabularx environment
 \usepackage{tabularx}
-
-%for lists within experience section
 \usepackage{enumitem}
-
-% centered version of 'X' col. type
-\newcolumntype{C}{>{\centering\arraybackslash}X}
-
-%to prevent spillover of tabular into next pages
-\usepackage{supertabular}
-\usepackage{tabularx}
-\newlength{\fullcollw}
-\setlength{\fullcollw}{0.47\textwidth}
-
-%custom \section
 \usepackage{titlesec}
-\usepackage{multicol}
-\usepackage{multirow}
-
-%CV Sections inspired by:
-%http://stefano.italians.nl/archives/26
-\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
-
-%for publications
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
-
-%Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-\addbibresource{citations.bib}
-\setlength\bibitemsep{1em}
-
-%for social icons
 \usepackage{fontawesome5}
 \usepackage{orcidlink}
 
-%debug page outer frames
-%\usepackage{showframe}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\setlength{\emergencystretch}{3em}
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
 
-%----------------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
-%----------------------------------------------------------------------------------------
+\newif\iffullpublications
+\fullpublicationsfalse
+
+\newcommand{\publication}[2]{\item[--] #1\href{#2}{\,\faLink}}
+
 \begin{document}
-
-% non-numbered pages
 \pagestyle{empty}
-
-%----------------------------------------------------------------------------------------
-%	TITLE
-%----------------------------------------------------------------------------------------
-
-% \begin{tabularx}{\linewidth}{ @{}X X@{} }
-% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
-% \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
-% \end{tabularx}
-
-% \begin{multicols}{2}
-% \twocolumn
-
-% \begin{wrapfigure}{r}{0.12\textwidth}
-%     % \centering
-%     \vspace*{-1cm}
-%     \includegraphics[width=0.12\textwidth]{Ankur_Barsode.png}
-%     \label{fig:Ankur_Barsode}
-% \end{wrapfigure}
 
 \vspace{1cm}
 
 \Huge Ankur Barsode\\[7.5pt]
-\normalsize \href{mailto:ankur.barsode@icts.res.in}{\raisebox{-0.05\height}\faEnvelope \ ankur.barsode@icts.res.in} \ $|$ \ \href{https://scholar.google.com/citations?user=HiMMiqgAAAAJ&hl=en}{\faGraduationCap} \ $|$ \
- \raisebox{-.3ex}{\scalebox{1.5}{\orcidlink{https://orcid.org/0009-0002-3054-7237}}} \ $|$ \
+\normalsize
+\href{mailto:ankur.barsode@icts.res.in}{\raisebox{-0.05\height}\faEnvelope}
+\ $|$ \
+\href{https://anbarsode.github.io/}{\raisebox{-0.05\height}\faGlobe}
+\ $|$ \
+\href{https://scholar.google.com/citations?user=HiMMiqgAAAAJ\&hl=en}{\faGraduationCap}
+\ $|$ \
+\raisebox{-.3ex}{\scalebox{1.5}{\orcidlink{https://orcid.org/0009-0002-3054-7237}}}
+\ $|$ \
 \href{https://github.com/anbarsode}{\raisebox{-0.05\height}\faGithub}
 
-PhD candidate (Gravitational wave astronomy) at the International Centre for Theoretical Science, Bangalore, expected August 2026
+PhD candidate (gravitational-wave astronomy) at the International Centre for Theoretical Sciences, Bengaluru, expected August 2026
 
 MSc (Physics) at Birla Institute of Technology and Science Pilani, Rajasthan, 2021
 
-
-
 \section{Research Interests}
-%independent
 Detecting gravitational lensing of gravitational waves (GWs), astrophysics and cosmology using GWs, Bayesian statistics and data analysis
 
-
-
 \section{Experience}
-\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-\item[--] PhD Student, ICTS-TIFR, Bangalore (2021-present)
+\begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=3pt]
+\item[--] PhD Student, ICTS-TIFR, Bengaluru (2021--present)
 \item[--] Short-term Visitor, Albert Einstein Institute (AEI), Potsdam (2024)
 \item[--] Short-term Visitor, UCLouvain, Belgium (2024)
 \item[--] Long-term Research Student, National Center for Radio Astronomy, Pune (2021)
 \item[--] Summer Research Student, National Center for Radio Astronomy, Pune (2020)
 \end{itemize}
 
-\textbf{LIGO-Virgo-Kagra}
-\begin{itemize}[nosep,after=\strut, leftmargin=1em, leftmargin=1em, itemsep=3pt]
-\item[--] Data analyst: search for strongly lensed GWs (2022-present)
-\item[--] Editorial Team member: search for lensed GWs in O4b (2025-present)
+\textbf{LIGO--Virgo--KAGRA}
+\begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=3pt]
+\item[--] Data analyst: search for strongly lensed GWs (2022--present)
+\item[--] Editorial Team member: search for lensed GWs in O4b (2025--present)
 \end{itemize}
-
-
 
 \section{Honors and Awards}
-\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-\item[--] International Travel Support from ANRF for presenting my work at the Summer School in Cosmology at International Centre for Theoretical Physics (ICTP), Trieste (2024)
-\item[--] Prabhat Award by BITS Alumnus to the best outgoing research oriented student of physics (2021)
-\item[--] KVPY by the Department of Science and Technology - Govt. of India to encourage research at the undergraduate level (2016)
+\begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=3pt]
+\item[--] International Travel Support from ANRF for presenting my work at the Summer School in Cosmology at the International Centre for Theoretical Physics (ICTP), Trieste (2024)
+\item[--] Prabhat Award by BITS alumnus to the best outgoing research-oriented student of physics (2021)
+\item[--] KVPY by the Department of Science and Technology, Government of India, to encourage research at the undergraduate level (2016)
 \end{itemize}
-
-
 
 \section{Talks and Presentations}
 Invited Talks and Seminars
-\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+\begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=3pt]
 \item[--] ``Detecting strongly lensed gravitational waves,'' IISc, India (2026)
-\item[--] ``GWTC-4.0: Searches for Gravitational-Wave Lensing Signatures'' LVK Webinar (2026)
+\item[--] ``GWTC-4.0: Searches for Gravitational-Wave Lensing Signatures,'' LVK Webinar (2026)
 \item[--] ``PO2.0: Fast and efficient GW strong lensing search,'' AEI, Potsdam (2024)
 \item[--] ``PO2.0: Fast and efficient GW strong lensing search,'' UCLouvain (2024)
 \end{itemize}
 Contributed Talks and Posters
-\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+\begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=3pt]
 \item[--] ``Constraints on compact DM from the non-observation of GW strong lensing,'' Summer School in Cosmology, ICTP, Trieste (2024)
-\item[--] ``Hybrid methods to simulate the cosmological HI field,'' Frontiers in Cosmology, Raman Research Institute, Bangalore (2023)
+\item[--] ``Hybrid methods to simulate the cosmological HI field,'' Frontiers in Cosmology, Raman Research Institute, Bengaluru (2023)
 \item[--] ``Constraints on compact DM from the non-observation of GW strong lensing,'' IAGRG, Indian Institute of Science Education and Research, Kolkata (2022)
 \end{itemize}
 
-
-
 \section{Teaching and Mentoring}
-\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-\item[--] Lecturer, GW-Open Data Workshop, ICTS-TIFR, Bangalore (2025-2026)
-\item[--] Tutor, GW-Open Data Workshop, ICTS-TIFR, Bangalore (2024-2026)
-\item[--] Tutor, Summer School on GW astronomy, ICTS-TIFR, Bangalore (2023-2025)
-\item[--] Teaching Assistant, Tools of Astrophysics, ICTS-TIFR, Bangalore (2024)
-\item[--] Mentoring a first-year PhD student in research basics (2025-present)
-\item[--] Informally advised a Master's student (2025)
+\begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=3pt]
+\item[--] Lecturer, GW-Open Data Workshop, ICTS-TIFR, Bengaluru (2025--2026)
+\item[--] Tutor, GW-Open Data Workshop, ICTS-TIFR, Bengaluru (2024--2026)
+\item[--] Tutor, Summer School on GW astronomy, ICTS-TIFR, Bengaluru (2023--2025)
+\item[--] Teaching Assistant, Tools of Astrophysics, ICTS-TIFR, Bengaluru (2024)
+\item[--] Mentoring a first-year PhD student in research basics (2025--present)
+\item[--] Informally advised a master's student (2025)
 \end{itemize}
 
-
-
 \section{Service and Outreach}
-\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-\item[--] Reviewer, LIGO-Virgo-KAGRA's Papers and Publications
-\item[--] Organizer, GW-Open Data Workshop, ICTS-TIFR, Bangalore (2024-2025)
-\item[--] Invented the \href{https://github.com/anbarsode/GW_jug/blob/main/poster.jpg}{The Gravitational Wave Chirp Bottle} to take GW astronomy to households
+\begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=3pt]
+\item[--] Reviewer, LIGO--Virgo--KAGRA Papers and Publications
+\item[--] Organizer, GW-Open Data Workshop, ICTS-TIFR, Bengaluru (2024--2025)
+\item[--] Invented \href{https://github.com/anbarsode/GW_jug/blob/main/poster.jpg}{The Gravitational Wave Chirp Bottle} to take GW astronomy to households
 \item[--] Organized and conducted public demonstrations as a member of Astro Club (ICTS-TIFR)
 \item[--] Contributed to an exhibition on Climate Change (ICTS-TIFR)
 \end{itemize}
 
-
-
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-Programming &  \normalsize{\textsc{Python}, \textsc{C++}, \textsc{JavaScript}; git, large scale computing, pipelining}\\
-Analysis  &  \normalsize{gravitational wave data analysis, statistics, parameter estimation, machine learning}\\
-Visualization  &  \normalsize{\textsc{Matplotlib}, \textsc{Processing}/p5js, \textsc{Blender}}\\
-Communication  &  \normalsize{Scientific writing (\LaTeX, Markdown), presentation (slides, posters, blackboard)}\\
-Miscellaneous  &  \normalsize{\textsc{Arduino}, workshop}\\
+Programming & \normalsize{\textsc{Python}, \textsc{C++}, \textsc{JavaScript}; git, large-scale computing, pipelining}\\
+Analysis & \normalsize{gravitational-wave data analysis, statistics, parameter estimation, machine learning}\\
+Visualization & \normalsize{\textsc{Matplotlib}, \textsc{Processing}/p5js, \textsc{Blender}}\\
+Communication & \normalsize{Scientific writing (\LaTeX, Markdown), presentation (slides, posters, blackboard)}\\
+Miscellaneous & \normalsize{\textsc{Arduino}, workshop}\\
 \end{tabularx}
 
-\section{Selected Publications}
-%Refereed Journal Articles
-\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-\item[--] Barsode, A., Maity, K. N., \& Ajith, P. (2026). Lensing, not luck! Detection prospects of strongly lensed gravitational waves. ApJ, 998(2), 294.
-\item[--] Barsode, A., Goyal, S., \& Ajith, P. (2025). Fast and efficient Bayesian method to search for strongly lensed gravitational waves. ApJ, 980(2), 258.
-\item[--] Barsode, A., Kapadia, S. J., \& Ajith, P. (2024). Constraints on compact dark matter from the nonobservation of gravitational-wave strong lensing. ApJ, 975(1), 48.
-\item[--] Barsode, A., \& Choudhury, T. R. (2024). Efficient hybrid technique for generating sub-grid haloes in reionization simulations. JCAP, 2024(11), 036.
+\section{\iffullpublications Full Publications\else Selected Publications\fi}
+\begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=3pt]
+\iffullpublications
+\publication{Barsode, Ankur, Koustav N. Maity, and Parameswaran Ajith. ``Search for Strong Lensing of Gravitational Waves in the Binary Black Hole Events from O1--O4a.'' \textit{arXiv}, arXiv:2607.08466, 2026. }{https://arxiv.org/abs/2607.08466}
+\publication{Barsode, Ankur. ``BB Plot: A Tool for Accurate Model Selection Using Bayes Factors.'' \textit{arXiv}, arXiv:2605.10333, 2026. }{https://arxiv.org/abs/2605.10333}
+\publication{Barsode, Ankur, Koustav N. Maity, and Parameswaran Ajith. ``Lensing, Not Luck! Detection Prospects of Strongly Lensed Gravitational Waves.'' \textit{The Astrophysical Journal}, vol. 998, no. 2, 2026, article 294. }{https://doi.org/10.3847/1538-4357/ae38c1}
+\publication{Barsode, Ankur, Srashti Goyal, and Parameswaran Ajith. ``Fast and Efficient Bayesian Method to Search for Strongly Lensed Gravitational Waves.'' \textit{The Astrophysical Journal}, vol. 980, no. 2, 2025, article 258. }{https://doi.org/10.3847/1538-4357/adae10}
+\publication{Barsode, Ankur, and Tirthankar Roy Choudhury. ``Efficient Hybrid Technique for Generating Sub-Grid Haloes in Reionization Simulations.'' \textit{Journal of Cosmology and Astroparticle Physics}, no. 11, 2024, article 036. }{https://doi.org/10.1088/1475-7516/2024/11/036}
+\publication{Barsode, Ankur, S. J. Kapadia, and Parameswaran Ajith. ``Constraints on Compact Dark Matter from the Nonobservation of Gravitational-Wave Strong Lensing.'' \textit{The Astrophysical Journal}, vol. 975, no. 1, 2024, article 48. }{https://doi.org/10.3847/1538-4357/ad77c4}
+\publication{Barsode, Ankur, and Aneesh A. M. ``Bypassing Traditional Molecular Dynamics with Artificial Neural Networks.'' \textit{AIP Conference Proceedings}, 2023. }{https://doi.org/10.1063/5.0127801}
+\publication{Maity, Koustav N., Souvik Jana, Tejaswi Venumadhav, Ankur Barsode, and Parameswaran Ajith. ``Strong Lensing Cosmography Using Binary-Black-Hole Mergers: Prospects for the Near Future.'' \textit{Physical Review D}, vol. 113, no. 10, 2026, article 103522. }{https://doi.org/10.1103/xq61-pqm6}
+\publication{Wright, Mick, et al. ``LensingFlow: An Automated Workflow for Gravitational Wave Lensing Analyses.'' \textit{RAS Techniques and Instruments}, vol. 5, 2026, article rzag003. }{https://doi.org/10.1093/rasti/rzag003}
+\publication{The LIGO Scientific Collaboration, the Virgo Collaboration, and the KAGRA Collaboration. ``GWTC-4.0: Searches for Gravitational-Wave Lensing Signatures.'' \textit{arXiv}, arXiv:2512.16347, 2025. }{https://arxiv.org/abs/2512.16347}
+\else
+\publication{Barsode, Ankur, Koustav N. Maity, and Parameswaran Ajith. ``Search for Strong Lensing of Gravitational Waves in the Binary Black Hole Events from O1--O4a.'' \textit{arXiv}, arXiv:2607.08466, 2026. }{https://arxiv.org/abs/2607.08466}
+\publication{Barsode, Ankur. ``BB Plot: A Tool for Accurate Model Selection Using Bayes Factors.'' \textit{arXiv}, arXiv:2605.10333, 2026. }{https://arxiv.org/abs/2605.10333}
+\publication{Barsode, Ankur, Koustav N. Maity, and Parameswaran Ajith. ``Lensing, Not Luck! Detection Prospects of Strongly Lensed Gravitational Waves.'' \textit{The Astrophysical Journal}, vol. 998, no. 2, 2026, article 294. }{https://doi.org/10.3847/1538-4357/ae38c1}
+\fi
 \end{itemize}
-%Accepted
-%\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-%\item[--]
-%\end{itemize}
-%Submitted / Under Review
-%\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-%\item[--]
-%\end{itemize}
-Full publication list available on \href{https://inspirehep.net/authors/3081663}{Inspire-HEP}, \href{https://scholar.google.com/citations?user=HiMMiqgAAAAJ\&hl=en}{Google Scholar}
 
-%\section{Publications}
-%Full list available on \href{https://inspirehep.net/authors/3081663}{Inspire-HEP}, \href{https://scholar.google.com/citations?user=HiMMiqgAAAAJ\&hl=en}{Google Scholar}
-%
-%Refereed Journal Articles
-%\begin{enumerate}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-%\item \textbf{Barsode, A.}, Maity, K. N., \& Ajith, P. (2026). Lensing, not luck! Detection prospects of strongly lensed gravitational waves. The Astrophysical Journal, 998(2), 294.
-%\item \textbf{Barsode, A.}, Goyal, S., \& Ajith, P. (2025). Fast and efficient Bayesian method to search for strongly lensed gravitational waves. The Astrophysical Journal, 980(2), 258.
-%\item \textbf{Barsode, A.}, Kapadia, S. J., \& Ajith, P. (2024). Constraints on compact dark matter from the nonobservation of gravitational-wave strong lensing. The Astrophysical Journal, 975(1), 48.
-%\item \textbf{Barsode, A.}, \& Choudhury, T. R. (2024). Efficient hybrid technique for generating sub-grid haloes in reionization simulations. Journal of Cosmology and Astroparticle Physics, 2024(11), 036.
-%\item Wright, M., Janquart, J., ..., \textbf{Barsode, A.}, ... \& Pankunni, P. (2026). LensingFlow: An Automated Workflow for Gravitational Wave Lensing Analyses. RAS Techniques and Instruments, Volume 5, 2026, rzag003.
-%\end{enumerate}
-%%
-%%Accepted
-%%\begin{enumerate}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-%%\item
-%%\end{enumerate}
-%%
-%Submitted / Under Review
-%\begin{enumerate}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
-%\item \textbf{Barsode, A.}, with LIGO-Virgo-KAGRA Collaboration (2025). GWTC-4.0: Searches for Gravitational-Wave Lensing Signatures. arXiv preprint arXiv:2512.16347.
-%\item Maity, K. N., Jana, S., Venumadhav, T., \textbf{Barsode, A.}, \& Ajith, P. (2025). Strong lensing cosmography using binary-black-hole mergers: Prospects for the near future. arXiv preprint arXiv:2512.15168. \textit{Submitted to Physical Review D.}
-%\end{enumerate}
+Full publication records: \href{https://inspirehep.net/authors/3081663}{INSPIRE-HEP} and \href{https://scholar.google.com/citations?user=HiMMiqgAAAAJ\&hl=en}{Google Scholar}.
 
-% \vfill
-% \center{\footnotesize Last updated: \today}
+\vfill
+\begin{center}
+\footnotesize Last updated: 29 July 2026
+\end{center}
 
 \end{document}
