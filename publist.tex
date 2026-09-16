@@ -5,14 +5,18 @@
 \usepackage{xcolor}
 \usepackage[unicode]{hyperref}
 \usepackage{titlesec}
+\usepackage[scaled=0.95]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
 
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks=true, urlcolor=linkcolour, linkcolor=linkcolour}
 \setlength{\emergencystretch}{3em}
 \setlist[enumerate]{leftmargin=1.8em, itemsep=6pt, topsep=5pt}
-\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titleformat{\section}{\large\bfseries\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{12pt}{6pt}
 \newcommand{\publication}[2]{\item #1\href{#2}{\,\textsuperscript{[link]}}}
+\newcommand{\myname}{\textbf{Barsode, Ankur}}
+\newcommand{\myfullname}{\textbf{Ankur Barsode}}
 
 \begin{document}
 \pagestyle{empty}
@@ -26,20 +30,20 @@
 
 \section{Refereed Journal Articles}
 \begin{enumerate}
-\publication{Barsode, Ankur. ``Tool for Accurate Model Selection Using Bayes Factors.'' \textit{Physical Review D}, vol. 114, 2026, article 064045.}{https://doi.org/10.1103/wv11-h53b}
-\publication{Barsode, Ankur, Koustav N. Maity, and Parameswaran Ajith. ``Search for Strong Lensing of Gravitational Waves in the Binary Black Hole Events from O1--O4a.'' \textit{The Astrophysical Journal}, vol. 1009, no. 1, 2026, article 43.}{https://doi.org/10.3847/1538-4357/ae9d69}
-\publication{Barsode, Ankur, Koustav N. Maity, and Parameswaran Ajith. ``Lensing, Not Luck! Detection Prospects of Strongly Lensed Gravitational Waves.'' \textit{The Astrophysical Journal}, vol. 998, no. 2, 2026, article 294.}{https://doi.org/10.3847/1538-4357/ae38c1}
-\publication{Barsode, Ankur, Srashti Goyal, and Parameswaran Ajith. ``Fast and Efficient Bayesian Method to Search for Strongly Lensed Gravitational Waves.'' \textit{The Astrophysical Journal}, vol. 980, no. 2, 2025, article 258.}{https://doi.org/10.3847/1538-4357/adae10}
-\publication{Barsode, Ankur, and Tirthankar Roy Choudhury. ``Efficient Hybrid Technique for Generating Sub-Grid Haloes in Reionization Simulations.'' \textit{Journal of Cosmology and Astroparticle Physics}, no. 11, 2024, article 036.}{https://doi.org/10.1088/1475-7516/2024/11/036}
-\publication{Barsode, Ankur, S. J. Kapadia, and Parameswaran Ajith. ``Constraints on Compact Dark Matter from the Nonobservation of Gravitational-Wave Strong Lensing.'' \textit{The Astrophysical Journal}, vol. 975, no. 1, 2024, article 48.}{https://doi.org/10.3847/1538-4357/ad77c4}
-\publication{Barsode, Ankur, and Aneesh A. M. ``Bypassing Traditional Molecular Dynamics with Artificial Neural Networks.'' \textit{AIP Conference Proceedings}, 2023.}{https://doi.org/10.1063/5.0127801}
-\publication{Maity, Koustav N., Souvik Jana, Tejaswi Venumadhav, Ankur Barsode, and Parameswaran Ajith. ``Strong Lensing Cosmography Using Binary-Black-Hole Mergers: Prospects for the Near Future.'' \textit{Physical Review D}, vol. 113, no. 10, 2026, article 103522.}{https://doi.org/10.1103/xq61-pqm6}
+\publication{\myname. ``Tool for Accurate Model Selection Using Bayes Factors.'' \textit{Physical Review D}, vol. 114, 2026, article 064045.}{https://doi.org/10.1103/wv11-h53b}
+\publication{\myname, Koustav N. Maity, and Parameswaran Ajith. ``Search for Strong Lensing of Gravitational Waves in the Binary Black Hole Events from O1--O4a.'' \textit{The Astrophysical Journal}, vol. 1009, no. 1, 2026, article 43.}{https://doi.org/10.3847/1538-4357/ae9d69}
+\publication{\myname, Koustav N. Maity, and Parameswaran Ajith. ``Lensing, Not Luck! Detection Prospects of Strongly Lensed Gravitational Waves.'' \textit{The Astrophysical Journal}, vol. 998, no. 2, 2026, article 294.}{https://doi.org/10.3847/1538-4357/ae38c1}
+\publication{\myname, Srashti Goyal, and Parameswaran Ajith. ``Fast and Efficient Bayesian Method to Search for Strongly Lensed Gravitational Waves.'' \textit{The Astrophysical Journal}, vol. 980, no. 2, 2025, article 258.}{https://doi.org/10.3847/1538-4357/adae10}
+\publication{\myname, and Tirthankar Roy Choudhury. ``Efficient Hybrid Technique for Generating Sub-Grid Haloes in Reionization Simulations.'' \textit{Journal of Cosmology and Astroparticle Physics}, no. 11, 2024, article 036.}{https://doi.org/10.1088/1475-7516/2024/11/036}
+\publication{\myname, S. J. Kapadia, and Parameswaran Ajith. ``Constraints on Compact Dark Matter from the Nonobservation of Gravitational-Wave Strong Lensing.'' \textit{The Astrophysical Journal}, vol. 975, no. 1, 2024, article 48.}{https://doi.org/10.3847/1538-4357/ad77c4}
+\publication{\myname, and Aneesh A. M. ``Bypassing Traditional Molecular Dynamics with Artificial Neural Networks.'' \textit{AIP Conference Proceedings}, 2023.}{https://doi.org/10.1063/5.0127801}
+\publication{Maity, Koustav N., Souvik Jana, Tejaswi Venumadhav, \myfullname, and Parameswaran Ajith. ``Strong Lensing Cosmography Using Binary-Black-Hole Mergers: Prospects for the Near Future.'' \textit{Physical Review D}, vol. 113, no. 10, 2026, article 103522.}{https://doi.org/10.1103/xq61-pqm6}
 \publication{Wright, Mick, et al. ``LensingFlow: An Automated Workflow for Gravitational Wave Lensing Analyses.'' \textit{RAS Techniques and Instruments}, vol. 5, 2026, article rzag003.}{https://doi.org/10.1093/rasti/rzag003}
 \end{enumerate}
 
 \section{Submitted / Under Review}
 \begin{enumerate}
-\publication{Maity, Koustav N., Souvik Jana, Ankur Barsode, Tejaswi Venumadhav, and Parameswaran Ajith. ``Probing Dark Matter with Strongly Lensed Binary Black Hole Mergers: Prospects in the Near Future.'' \textit{arXiv}, arXiv:2609.05020, 2026.}{https://arxiv.org/abs/2609.05020}
+\publication{Maity, Koustav N., Souvik Jana, \myfullname, Tejaswi Venumadhav, and Parameswaran Ajith. ``Probing Dark Matter with Strongly Lensed Binary Black Hole Mergers: Prospects in the Near Future.'' \textit{arXiv}, arXiv:2609.05020, 2026.}{https://arxiv.org/abs/2609.05020}
 \publication{The LIGO Scientific Collaboration, the Virgo Collaboration, and the KAGRA Collaboration. ``GWTC-4.0: Searches for Gravitational-Wave Lensing Signatures.'' \textit{arXiv}, arXiv:2512.16347, 2025.}{https://arxiv.org/abs/2512.16347}
 \end{enumerate}
 
