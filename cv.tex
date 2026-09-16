@@ -1,9 +1,9 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,11pt]{article}
 
 \usepackage{parskip}
 \usepackage{graphicx}
 \usepackage{xcolor}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.8in]{geometry}
 \usepackage{tabularx}
 \usepackage{enumitem}
 \usepackage{titlesec}
@@ -15,17 +15,17 @@
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 \setlength{\emergencystretch}{3em}
 \titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
+\titlespacing{\section}{0pt}{9pt}{6pt}
 
 \newif\iffullpublications
 \fullpublicationsfalse
 
-\newcommand{\publication}[2]{\item[--] #1\href{#2}{\,\faLink}}
+\newcommand{\publication}[2]{\item[--] #1\href{#2}{\,\textsuperscript{[link]}}}
 
 \begin{document}
 \pagestyle{empty}
 
-\vspace{1cm}
+\vspace{0.45cm}
 
 \Huge Ankur Barsode\\[7.5pt]
 \normalsize
@@ -39,11 +39,11 @@
 \ $|$ \
 \href{https://github.com/anbarsode}{\raisebox{-0.05\height}\faGithub}
 
-Post-doctoral Fellow (gravitational-wave astronomy) at the Chennai Mathematical Institute
+Postdoctoral Fellow (gravitational-wave astronomy) at the Chennai Mathematical Institute
 
-PhD thesis submitted to International Centre for Theoretical Sciences (ICTS-TIFR), Bengaluru (August, 2026), titled "Strong Gravitational Lensing of Gravitational Waves"
+PhD thesis submitted to the International Centre for Theoretical Sciences (ICTS-TIFR), Bengaluru (August 2026), titled "Strong Gravitational Lensing of Gravitational Waves"
 
-MSc (Physics) at Birla Institute of Technology and Science Pilani, Rajasthan, 2021
+MSc (Physics), Birla Institute of Technology and Science Pilani, Rajasthan, 2021
 
 \section{Research Interests}
 Detecting gravitational lensing of gravitational waves (GWs), astrophysics and cosmology using GWs, Bayesian statistics and data analysis
@@ -59,7 +59,7 @@ Detecting gravitational lensing of gravitational waves (GWs), astrophysics and c
 \item[--] Summer Research Student, National Center for Radio Astronomy, Pune (2020)
 \end{itemize}
 
-\textbf{LIGO--Virgo--KAGRA (LVK)}
+\textit{LIGO--Virgo--KAGRA (LVK)}
 \begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=3pt]
 \item[--] Data analyst: search for strongly lensed GWs (2022--present)
 \item[--] Editor: LVK Collaboration paper on the search for lensed GWs in O4b and O4c (2025--present)
@@ -73,7 +73,7 @@ Detecting gravitational lensing of gravitational waves (GWs), astrophysics and c
 \end{itemize}
 
 \section{Talks and Presentations}
-Invited Talks and Seminars
+\textit{Invited Talks and Seminars}
 \begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=3pt]
 %\item[--] ``Search for gravitationally lensed gravitational waves,'' International Astronomical Union Webinar (2026) % to be uncommented after 31 Oct 2026
 \item[--] ``Detecting strongly lensed gravitational waves,'' CUHK, Hong Kong (2026)
@@ -82,7 +82,7 @@ Invited Talks and Seminars
 \item[--] ``PO2.0: Fast and efficient GW strong lensing search,'' AEI, Potsdam (2024)
 \item[--] ``PO2.0: Fast and efficient GW strong lensing search,'' UCLouvain (2024)
 \end{itemize}
-Contributed Talks and Posters
+\textit{Contributed Talks and Posters}
 \begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=3pt]
 \item[--] ``Gravitational wave chirp bottle,'' LVK September meeting, Inter-University Center for Astronomy and Astrophysics (IUCAA), Pune (2026)
 \item[--] ``Detection prospects of strongly lensed gravitational waves,'' Multi-Messenger Astrophysics in the Dynamic Universe, Yukawa Institute of Theoretical Physics, Kyoto (2026)
@@ -116,39 +116,40 @@ Contributed Talks and Posters
 
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-Efficient, reliable workflows with Agentic AI&\\
 Programming & \normalsize{\textsc{Python}, \textsc{C++}, \textsc{JavaScript}; git, large-scale computing, pipelining}\\
 Analysis & \normalsize{gravitational-wave data analysis, statistics, parameter estimation, machine learning}\\
 Visualization & \normalsize{\textsc{Matplotlib}, \textsc{Processing}/p5js, \textsc{Blender}}\\
 Communication & \normalsize{Scientific writing (\LaTeX, Markdown), presentation (slides, posters, blackboard)}\\
 Miscellaneous & \normalsize{\textsc{Arduino}, workshop}\\
+AI & Efficient, reliable workflows with Agentic AI\\
 \end{tabularx}
 
-\section{\iffullpublications Full Publications\else Selected Publications\fi}
+\section{\iffullpublications Publications\else Selected Publications\fi}
 \begin{itemize}[nosep,after=\strut,leftmargin=1em,itemsep=3pt]
 \iffullpublications
-\publication{Barsode, Ankur, Koustav N. Maity, and Parameswaran Ajith. ``Search for Strong Lensing of Gravitational Waves in the Binary Black Hole Events from O1--O4a.'' \textit{arXiv}, arXiv:2607.08466, 2026. }{https://arxiv.org/abs/2607.08466}
-\publication{Barsode, Ankur. ``BB Plot: A Tool for Accurate Model Selection Using Bayes Factors.'' \textit{arXiv}, arXiv:2605.10333, 2026. }{https://arxiv.org/abs/2605.10333}
+\publication{Barsode, Ankur. ``Tool for Accurate Model Selection Using Bayes Factors.'' \textit{Physical Review D}, vol. 114, 2026, article 064045. }{https://doi.org/10.1103/wv11-h53b}
+\publication{Barsode, Ankur, Koustav N. Maity, and Parameswaran Ajith. ``Search for Strong Lensing of Gravitational Waves in the Binary Black Hole Events from O1--O4a.'' \textit{The Astrophysical Journal}, vol. 1009, no. 1, 2026, article 43. }{https://doi.org/10.3847/1538-4357/ae9d69}
 \publication{Barsode, Ankur, Koustav N. Maity, and Parameswaran Ajith. ``Lensing, Not Luck! Detection Prospects of Strongly Lensed Gravitational Waves.'' \textit{The Astrophysical Journal}, vol. 998, no. 2, 2026, article 294. }{https://doi.org/10.3847/1538-4357/ae38c1}
 \publication{Barsode, Ankur, Srashti Goyal, and Parameswaran Ajith. ``Fast and Efficient Bayesian Method to Search for Strongly Lensed Gravitational Waves.'' \textit{The Astrophysical Journal}, vol. 980, no. 2, 2025, article 258. }{https://doi.org/10.3847/1538-4357/adae10}
 \publication{Barsode, Ankur, and Tirthankar Roy Choudhury. ``Efficient Hybrid Technique for Generating Sub-Grid Haloes in Reionization Simulations.'' \textit{Journal of Cosmology and Astroparticle Physics}, no. 11, 2024, article 036. }{https://doi.org/10.1088/1475-7516/2024/11/036}
 \publication{Barsode, Ankur, S. J. Kapadia, and Parameswaran Ajith. ``Constraints on Compact Dark Matter from the Nonobservation of Gravitational-Wave Strong Lensing.'' \textit{The Astrophysical Journal}, vol. 975, no. 1, 2024, article 48. }{https://doi.org/10.3847/1538-4357/ad77c4}
 \publication{Barsode, Ankur, and Aneesh A. M. ``Bypassing Traditional Molecular Dynamics with Artificial Neural Networks.'' \textit{AIP Conference Proceedings}, 2023. }{https://doi.org/10.1063/5.0127801}
+\publication{Maity, Koustav N., Souvik Jana, Ankur Barsode, Tejaswi Venumadhav, and Parameswaran Ajith. ``Probing Dark Matter with Strongly Lensed Binary Black Hole Mergers: Prospects in the Near Future.'' \textit{arXiv}, arXiv:2609.05020, 2026. }{https://arxiv.org/abs/2609.05020}
 \publication{Maity, Koustav N., Souvik Jana, Tejaswi Venumadhav, Ankur Barsode, and Parameswaran Ajith. ``Strong Lensing Cosmography Using Binary-Black-Hole Mergers: Prospects for the Near Future.'' \textit{Physical Review D}, vol. 113, no. 10, 2026, article 103522. }{https://doi.org/10.1103/xq61-pqm6}
 \publication{Wright, Mick, et al. ``LensingFlow: An Automated Workflow for Gravitational Wave Lensing Analyses.'' \textit{RAS Techniques and Instruments}, vol. 5, 2026, article rzag003. }{https://doi.org/10.1093/rasti/rzag003}
 \publication{The LIGO Scientific Collaboration, the Virgo Collaboration, and the KAGRA Collaboration. ``GWTC-4.0: Searches for Gravitational-Wave Lensing Signatures.'' \textit{arXiv}, arXiv:2512.16347, 2025. }{https://arxiv.org/abs/2512.16347}
 \else
-\publication{Barsode, Ankur, Koustav N. Maity, and Parameswaran Ajith. ``Search for Strong Lensing of Gravitational Waves in the Binary Black Hole Events from O1--O4a.'' \textit{arXiv}, arXiv:2607.08466, 2026. }{https://arxiv.org/abs/2607.08466}
-\publication{Barsode, Ankur. ``BB Plot: A Tool for Accurate Model Selection Using Bayes Factors.'' \textit{arXiv}, arXiv:2605.10333, 2026. }{https://arxiv.org/abs/2605.10333}
+\publication{Barsode, Ankur. ``Tool for Accurate Model Selection Using Bayes Factors.'' \textit{Physical Review D}, vol. 114, 2026, article 064045. }{https://doi.org/10.1103/wv11-h53b}
+\publication{Barsode, Ankur, Koustav N. Maity, and Parameswaran Ajith. ``Search for Strong Lensing of Gravitational Waves in the Binary Black Hole Events from O1--O4a.'' \textit{The Astrophysical Journal}, vol. 1009, no. 1, 2026, article 43. }{https://doi.org/10.3847/1538-4357/ae9d69}
 \publication{Barsode, Ankur, Koustav N. Maity, and Parameswaran Ajith. ``Lensing, Not Luck! Detection Prospects of Strongly Lensed Gravitational Waves.'' \textit{The Astrophysical Journal}, vol. 998, no. 2, 2026, article 294. }{https://doi.org/10.3847/1538-4357/ae38c1}
 \fi
 \end{itemize}
 
-Full publication records: \href{https://inspirehep.net/authors/3081663}{INSPIRE-HEP} and \href{https://scholar.google.com/citations?user=HiMMiqgAAAAJ\&hl=en}{Google Scholar}.
+Full publication list can be found at \href{https://inspirehep.net/authors/3081663}{INSPIRE-HEP} and \href{https://scholar.google.com/citations?user=HiMMiqgAAAAJ\&hl=en}{Google Scholar}.
 
 \vfill
 \begin{center}
-\footnotesize Last updated: 29 July 2026
+\footnotesize Last updated: 16 September 2026
 \end{center}
 
 \end{document}
